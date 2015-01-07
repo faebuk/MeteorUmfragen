@@ -1,0 +1,15 @@
+<!-- Content für die Seite, 
+yield ist der dynamische Inhalt, 
+wird je nach Router geändert -->
+<template name="layout">
+	{{> header}}
+
+	<div class="container">
+		<div id="main">
+			{{> yield}}
+		</div>
+	</div>
+
+	{{> footer}}
+
+</template>

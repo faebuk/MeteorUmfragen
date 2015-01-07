@@ -1,0 +1,82 @@
+<template name="signupForm" id="signupForm">
+	<form name="signup">
+		<div class="col-md-10 signup">
+			<h3>Registration</h3>
+			{{> flashMessages}}
+			<div class="row">
+				<div class="col-md-2">
+					<label class="" for="signup-prename">Vorname</label>
+				</div>
+				<div class="col-md-4">
+					<input type="text" id="signup-prename" class="form-control" name="signup-prename" placeholder="Vorname">
+				</div>
+				<div class="col-md-2">
+					<label class="" for="signup-surname">Nachname</label>
+				</div>
+				<div class="col-md-4">
+					<input type="text" id="signup-surname" class="form-control" name="signup-surname" placeholder="Nachname">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+					<label class="" for="signup-password">Benutzername</label>
+				</div>
+				<div class="col-md-4">
+					<input type="text" id="signup-username" class="form-control" name="signup-username" placeholder="Benutzername">
+					<span class="help-block">Benutzername muss genau 6 Zeichen lang sein.</span>
+				</div>
+				<div class="col-md-2">
+					<label class="" for="signup-email">Email</label>
+				</div>
+				<div class="col-md-4">
+					<input type="email" id="signup-email" class="form-control" name="signup-email" placeholder="Email">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+					<label class="" for="signup-password">Passwort</label>
+				</div>
+				<div class="col-md-4">
+					<input type="password" id="signup-password" class="form-control" name="signup-password" placeholder="Passwort">
+					<span class="help-block">Min. 1 Gross und Kleinbuchstabe, 1 Sonderzeichen, 1 Zahl, 8 Zeichen lang</span>
+				</div>
+				<div class="col-md-2">
+					<label class="repass" for="signup-repassword">Passwort wiederholen</label>
+				</div>
+				<div class="col-md-4">
+					<input type="password" id="signup-repassword" class="form-control" name="signup-repassword" placeholder="Passwort">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2">
+					<label class="" for="signup-gender">Geschlecht</label>
+				</div>
+				<div class="col-md-10">
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="signup-gender" id="signup-gender" value="male">
+					    männlich
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="signup-gender" id="signup-gender" value="female">
+					    weiblich
+					  </label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2">
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+				<div class="col-md-2">
+					<button type="reset" class="btn btn-default">Reset</button>
+				</div>
+			</div>
+		</div>
+
+	</form>
+</template>

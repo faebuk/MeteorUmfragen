@@ -1,0 +1,39 @@
+<template name="questionItem">
+	<div class="post">
+		<div class="post-content">
+			<h3>{{question}}</h3>
+			<div class="radio">
+				{{#if equals question_user.answer "yes"}}
+					<label><input type="radio" value="yes" checked="true" name="{{_id}}">trifft zu</label>
+				{{else}}
+					<label><input type="radio" value="yes" name="{{_id}}">trifft zu</label>
+				{{/if}}
+			  
+			</div>
+			<div class="radio">
+				{{#if equals question_user.answer "yesno"}}
+					<label><input type="radio" value="yesno" checked="true" name="{{_id}}">trifft eher zu</label>
+				{{else}}
+					<label><input type="radio" value="yesno" name="{{_id}}">trifft eher zu</label>
+				{{/if}}
+			  
+			</div>
+			<div class="radio">
+				{{#if equals question_user.answer "noyes"}}
+					<label><input type="radio" value="noyes" checked="true" name="{{_id}}">trifft eher nicht zu</label>
+				{{else}}
+					<label><input type="radio" value="noyes" name="{{_id}}">trifft eher nicht zu</label>
+				{{/if}}
+			  
+			</div>
+			<div class="radio">
+				{{#if equals question_user.answer "no"}}
+					<label><input type="radio" value="no" checked="true" name="{{_id}}">trifft nicht zu</label>
+				{{else}}
+					<label><input type="radio" value="no" name="{{_id}}">trifft nicht zu</label>
+				{{/if}}
+			  
+			</div>
+		</div>
+	</div>
+</template>

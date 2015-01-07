@@ -1,0 +1,19 @@
+<template name="pollEdit">
+	{{> flashMessages}}			
+	<form>
+		<div>
+			<input type="text" value="{{title}}" class="edittitle form-control" name="pollTitle">
+
+			<input type="text" value="{{categories}}" class="editcategories form-control" name="pollCategories">
+		</div>
+
+		
+
+		{{#each questions}}
+			{{> questionEdit}}
+		{{/each}}
+
+		<button type="submit" class="btn btn-primary">Abschicken</button>
+		<a href="{{pathFor 'pollsList'}}" class="btn btn-danger">Abbrechen</a>
+	</form>
+</template>

@@ -1,0 +1,13 @@
+<template name="pollsList">
+	<div class="posts">
+	<h3>Umfragen</h3>
+		{{> flashMessages}}
+
+		{{#each polls}}
+			{{> pollItem}}
+		{{/each}}
+	</div>
+	<div>
+		<button class="addnew btn btn-primary">Umfrage hinzufügen</button>
+	</div>
+</template>

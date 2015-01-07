@@ -1,0 +1,13 @@
+<template name="pollPage">
+	<div>
+		<h3>{{title}}</h3>
+	</div>
+	{{> flashMessages}}	
+	<form>
+		{{#each questions}}
+			{{> questionItem}}
+		{{/each}}
+		<input type="submit" value="Abschicken" class="btn btn-primary"/>
+		<a href="{{pathFor 'pollsList'}}" class="btn btn-danger">Abbrechen</a>
+	</form>
+</template>

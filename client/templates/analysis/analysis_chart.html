@@ -1,0 +1,24 @@
+<template name="analysisChart">
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip({
+		        placement : 'top'
+		    });
+		});
+	</script>
+
+	<div class="progress">
+	  <div class="progress-bar progress-bar-success" style="width: {{count.yes}}%" data-toggle="tooltip" data-original-title="{{count.yes}}% Trifft zu">
+	    {{count.yes}}% Trifft zu
+	  </div>
+	  <div class="progress-bar progress-bar-info" style="width: {{count.yesno}}%" data-toggle="tooltip" data-original-title="{{count.yesno}}% Trifft eher zu">
+	    {{count.yesno}}% Trifft eher zu
+	  </div>
+	  <div class="progress-bar progress-bar-warning" style="width: {{count.noyes}}%" data-toggle="tooltip" data-original-title="{{count.noyes}}% Trifft eher nicht zu">
+	    {{count.noyes}}% Trifft eher nicht zu
+	  </div>
+	  <div class="progress-bar progress-bar-danger" style="width: {{count.no}}%" data-toggle="tooltip" data-original-title="{{count.no}}% Trifft nicht zu">
+	    {{count.no}}% Trifft nicht zu
+	  </div>
+	</div>	
+</template>
